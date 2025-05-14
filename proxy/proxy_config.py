@@ -13,14 +13,14 @@ class ProxyConfig:
 
         self.outbound = {
             'drop_all_traffic': False,
-            'allowed_transport_protocols': None,
+            'allowed_transport_protocols': True,
             'blocked_transport_protocols': None,
             'allowed_application_ports': None,
             'blocked_application_ports': None,
         }
         self.inbound = {
             'drop_all_traffic': False,
-            'allowed_transport_protocols': None,
+            'allowed_transport_protocols': True,
             'blocked_transport_protocols': None,
             'allowed_application_ports': None,
             'blocked_application_ports': None,

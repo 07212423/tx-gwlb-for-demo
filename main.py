@@ -13,7 +13,7 @@ from proxy.packet_inspector import PacketInspector
 
 UDP_IP = '0.0.0.0'
 UDP_PORT = 6081
-HEALTHCHECK_PORT = 80
+HEALTHCHECK_PORT = 8088
 IP_RECVERR = 11
 
 def main() -> None:
@@ -124,7 +124,7 @@ def parse_udp_packet(data: bytes, flow_stack: FlowStack, packet_inspector: Packe
         data
     ])
 
-    flow_cookie_tlv = geneve_header.get_tunnel_option(option_class=0x0108, option_type=3)
+    flow_cookie_tlv = geneve_header.get_tunnel_option(option_class=0x0167, option_type=3)
     if flow_cookie_tlv is None:
         raise ValueError('Flow Cookie TLV not found')
 
